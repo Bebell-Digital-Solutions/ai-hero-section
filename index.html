@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <!-- Include Rive runtime (CDN) -->
+  <script src="https://unpkg.com/@rive-app/canvas@latest"></script>
+  <style>
+    /* Hero section styling */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem;
+      min-height: 80vh;
+    }
+    .hero-content {
+      max-width: 50%;
+    }
+    /* Canvas container for animation */
+    .rive-animation {
+      width: 500px;  /* Adjust as needed */
+      height: 500px;
+    }
+
+    @media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero-content, .rive-animation {
+    max-width: 100%;
+  }
+}
+  </style>
+</head>
+<body>
+
+
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Left side: Text/content -->
+    <div class="hero-content">
+      <h1>Welcome to My Website</h1>
+      <p>This is a cool hero section with a Rive animation!</p>
+      <button>Learn More</button>
+    </div>
+
+    <!-- Right side: Rive Animation -->
+    <div class="rive-animation">
+      <canvas id="rive-canvas"></canvas>
+    </div>
+  </section>
+
+  <!-- Rive Animation Script -->
+  <script>
+    // Load the animation
+    new rive.Rive({
+      src: 'https://bebelldigitalsolutions.github.io/repo/animation.riv', // Update path
+      canvas: document.getElementById('rive-canvas'),
+      autoplay: true,
+      onLoad: () => {
+        console.log("Animation loaded!");
+      },
+    });
+  </script>
+</body>
+</html>
