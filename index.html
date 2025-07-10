@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
   
   <style>
     * {
@@ -130,7 +131,7 @@ body, html {
       padding: 13px 40px;
       border-radius: 50px;
       margin-top: 400px;
-      margin-bottom: 250px;
+      margin-bottom: 150px;
       border: none;
       background: linear-gradient(45deg, #df1783, purple);
       cursor: pointer;
@@ -180,13 +181,28 @@ body, html {
       transform: translateY(-10px);
     }
 
+   
+    
     .feature-icon {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      background: linear-gradient(45deg, #df1783, purple);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #df1783;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.lucide-icon {
+  width: 48px;
+  height: 48px;
+  stroke-width: 1.5;
+}
+    
+    
+    
+    
+    
 
     .feature-title {
       font-size: 1.5rem;
@@ -405,6 +421,40 @@ body, html {
       color: #666;
       font-size: 0.9rem;
     }
+    
+    
+      
+  <!-- Add smooth scrolling behavior -->
+
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Style anchor tags to look like buttons */
+    a.btn1, a.cta1 {
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+    
+    /* Style menu links */
+    .menu a {
+      color: white;
+      text-decoration: none;
+      transition: 0.4s;
+    }
+    
+    .menu a:hover {
+      background: linear-gradient(45deg, #df1783, purple);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transform: scale(1.2);
+    }
+ 
+    
+    
+    
 
     /* Responsive Adjustments */
     @media (max-width: 768px) {
@@ -470,6 +520,10 @@ body, html {
       }
     }
   </style>
+  
+      <script src="https://unpkg.com/lucide@latest"></script>
+  
+  
 </head>
 <body>
   <!-- Spline Viewer -->
@@ -484,6 +538,7 @@ body, html {
       <div class="logo">AutoBot</div>
       <ul class="menu">
         <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#solutions">Services</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -509,28 +564,39 @@ body, html {
       
       
   </div>
+  
+  
+  
+  
+  
 
-  <!-- Features Section -->
-  <section id="features">
-    <h2 class="section-title">Key Features</h2>
-    <div class="features-container">
-      <div class="feature-box">
-        <div class="feature-icon">⚡</div>
-        <h3 class="feature-title">Lightning Fast</h3>
-        <p class="feature-desc">Our AI processes automate tasks in seconds that would normally take hours of manual work.</p>
+<!-- Features Section -->
+<section id="features">
+  <h2 class="section-title">Key Features</h2>
+  <div class="features-container">
+    <div class="feature-box">
+      <div class="feature-icon">
+        <i data-lucide="zap" class="lucide-icon"></i>
       </div>
-      <div class="feature-box">
-        <div class="feature-icon">🤖</div>
-        <h3 class="feature-title">Smart Learning</h3>
-        <p class="feature-desc">Our systems learn and adapt to your business needs over time for continuous improvement.</p>
-      </div>
-      <div class="feature-box">
-        <div class="feature-icon">🔒</div>
-        <h3 class="feature-title">Secure & Private</h3>
-        <p class="feature-desc">Enterprise-grade security protects your data while our AI works its magic.</p>
-      </div>
+      <h3 class="feature-title">Lightning Fast</h3>
+      <p class="feature-desc">Our AI processes automate tasks in seconds that would normally take hours of manual work.</p>
     </div>
-  </section>
+    <div class="feature-box">
+      <div class="feature-icon">
+        <i data-lucide="bot" class="lucide-icon"></i>
+      </div>
+      <h3 class="feature-title">Smart Learning</h3>
+      <p class="feature-desc">Our systems learn and adapt to your business needs over time for continuous improvement.</p>
+    </div>
+    <div class="feature-box">
+      <div class="feature-icon">
+        <i data-lucide="lock" class="lucide-icon"></i>
+      </div>
+      <h3 class="feature-title">Secure & Private</h3>
+      <p class="feature-desc">Enterprise-grade security protects your data while our AI works its magic.</p>
+    </div>
+  </div>
+</section>
   
   
   
@@ -565,7 +631,7 @@ body, html {
 
 <!-- Cards Section -->
 <section id="solutions">
-  <h2 class="section-title">AI Solutions</h2>
+  <h2 class="section-title">AI Powered Solutions</h2>
   <div class="cards-container">
     <div class="card">
       <h3 class="card-title">Data Processing</h3>
@@ -578,7 +644,7 @@ body, html {
       <a href="#customer-support" class="card-btn">Explore</a>
     </div>
     <div class="card">
-      <h3 class="card-title">Marketing Automation</h3>
+      <h3 class="card-title">AI Automations</h3>
       <p class="card-desc">From personalized email campaigns to social media management, our AI optimizes your marketing efforts.</p>
       <a href="#marketing-automation" class="card-btn">Explore</a>
     </div>
@@ -699,35 +765,12 @@ body, html {
     });
   </script>
   
+
   
-  <!-- Add smooth scrolling behavior -->
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    
-    /* Style anchor tags to look like buttons */
-    a.btn1, a.cta1 {
-      color: white;
-      text-decoration: none;
-      display: inline-block;
-      text-align: center;
-    }
-    
-    /* Style menu links */
-    .menu a {
-      color: white;
-      text-decoration: none;
-      transition: 0.4s;
-    }
-    
-    .menu a:hover {
-      background: linear-gradient(45deg, #df1783, purple);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      transform: scale(1.2);
-    }
-  </style>
+  <script>
+  lucide.createIcons();
+</script>
+  
   
 </body>
 </html>
