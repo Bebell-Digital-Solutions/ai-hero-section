@@ -214,15 +214,21 @@ body, html {
       line-height: 1.6;
     }
 
+
+    
     /* About Section */
     .about-container {
       display: flex;
       gap: 30px;
       flex-wrap: wrap;
-      align-items: flex-start; /* Changed from center to flex-start */
+      align-items: center; /* Changed from center to flex-start */
       padding-bottom: 0px; /* Add this to control bottom space */
-
+      max-width: 1200px;
+align-items: center; 
+  width: 100%; /* Ensures it respects max-width */
+  margin: 0 auto; /* Centers container & adds equal margins */
     }
+
 
     .about-content {
       flex: 1;
@@ -766,6 +772,26 @@ body, html {
   </script>
   
 
+
+ 
+  <!-- NewOaks Script -->
+<script>
+  window.chatpilotConfig = {
+    chatbotId: "e5531966948b4f3bb6674dd771a42828",
+    domain: "https://asistente.chatterbot.support",
+    chatModeOnly: true
+  }
+</script>
+<script
+  src="https://asistente.chatterbot.support/embed.min.js"
+  charset="utf-8"
+  defer
+></script>
+ 
+ 
+
+
+  
   
   <script>
   lucide.createIcons();
